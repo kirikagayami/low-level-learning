@@ -3,20 +3,14 @@
 int main(void)
 {
 	int x = 42;
-	// int *p = &x;
-
-	// printf("x = %d\n", x);
-	// printf("&x = %p\n", (void *)&x);
-
-	// printf("p = %p\n", (void *)p);
-	// printf("*p = %d\n", *p);
+	int y = 99;
 
 	printf("x = %d\n", x);
-	// printf("size = %zu bytes\n", sizeof(x));
-	
-	// & operator is called the address-of-operator 
-	// x currently exists at virtual memory address, the address is different, depends on where the os put it in the memory
 	printf("address of x = %p\n", (void *)&x);
+	// x is 4 bytes apart from y, you can check the memory address
+	
+	printf("y = %d\n", y);
+	printf("address of y = %p\n", (void *)&y);
 
 	return 0;
 }

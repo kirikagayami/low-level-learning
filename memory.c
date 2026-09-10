@@ -4,6 +4,7 @@ int main(void)
 {
 	int x = 42;
 
+	printf("before:\n");
 	printf("x = %d\n", x);
 	printf("address of x = %p\n", (void *)&x);
 	// x is 4 bytes
@@ -20,9 +21,28 @@ int main(void)
 	printf("byte 3 = %u\n", ((unsigned char *)&x)[3]);
 	// this contains 00000000
 
+	x = 258;
+
+	printf("\nafter:\n");
+	printf("x = %d\n", x);
+	printf("address of x = %p\n", (void *)&x);
+	// x is 258 bytes
+
+	
+	// endianness, lowest byte comes first. This is called little-endian
+
+	printf("byte 0 = %u\n", ((unsigned char *)&x)[0]);
+	// this is exactly 8 bits because 42 is 00101010
+	printf("byte 1 = %u\n", ((unsigned char *)&x)[1]);
+	// this contains 00000000
+	printf("byte 2 = %u\n", ((unsigned char *)&x)[2]);
+	// this contains 00000000
+	printf("byte 3 = %u\n", ((unsigned char *)&x)[3]);
+	// this contains 00000000
+
 	int y = 258;
 
-	printf("y = %d\n", y);
+	printf("\ny = %d\n", y);
 	printf("address of y = %p\n", (void *)&y);
 	// y is 4 bytes
 
@@ -37,8 +57,6 @@ int main(void)
 	// this contains 00000000
 	printf("byte 3 = %u\n", ((unsigned char *)&y)[3]);
 	// this contains 00000000
-
-	
 
 	return 0;
 }

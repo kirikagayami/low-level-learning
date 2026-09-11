@@ -14,5 +14,11 @@ int main(void)
     printf("p = %p\n", (void *)p);
     printf("*p = %d\n", *p);
 
+    *p = 100;
+
+    printf("x = %d\n", x);
+    printf("*p = %d\n", *p);
+    printf("p = %p\n", (void *)p);
+
     return 0;
 }

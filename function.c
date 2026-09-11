@@ -9,20 +9,17 @@ int main(void)
 {
 
     int x = 42;
-    int *p = &x;
     printf("before\n");
     printf("\n");
     
     printf("x = %d\n", x);
-    printf("*p = %d\n", *p);
 
-    change(p);
+    change(&x);
     printf("\n");
     printf("after\n");
     printf("\n");
     
     printf("x = %d\n", x);
-    printf("*p = %d\n", *p);
 
     return 0;
 }

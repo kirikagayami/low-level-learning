@@ -27,6 +27,8 @@ int main(void)
 
     printf("p = %p\n", (void *)p);
     printf("*p = %d\n", *p);
+    printf("numbers[2] = %d\n", numbers[2]);
+    printf("*(p+2) = %d\n", *(p + 2));
 
     return 0;
 }

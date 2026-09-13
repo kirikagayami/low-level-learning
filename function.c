@@ -9,7 +9,7 @@ void swap(int *p, int *q)
 {
     int temp = *p;
     *p = *q;
-    temp = *p;
+    *q = temp;
 }
 
 int main(void)
@@ -19,19 +19,26 @@ int main(void)
     int a = 10;
     int b = 20;
 
+    printf("a = %d\n", a);
+    printf("b = %d\n", b);
+
     swap(&a, &b);
 
+    printf("after: \n");
+
+    printf("a = %d\n", a);
+    printf("b = %d\n", b);
     // int x = 42;
     // printf("before\n");
     // printf("\n");
-    
+
     // printf("x = %d\n", x);
 
     // change(&x);
     // printf("\n");
     // printf("after\n");
     // printf("\n");
-    
+
     // printf("x = %d\n", x);
 
     return 0;

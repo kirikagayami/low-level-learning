@@ -4,7 +4,6 @@ int main(void)
 {
     int numbers[] = {10, 20, 30, 40};
     int *p = &numbers[0];
-    p++;
     char *c = (char *)&numbers[0];
 
     printf("c = %p\n", (void *)c);
@@ -17,12 +16,12 @@ int main(void)
 
     printf("numbers[0] = %d\n", numbers[0]);
     printf("numbers[1] = %d\n", numbers[1]);
-    
+
     printf("\n");
 
     printf("&numbers[0] = %p\n", (void *)&numbers[0]);
     printf("&numbers[1] = %p\n", (void *)&numbers[1]);
-    
+
     printf("\n");
 
     printf("p = %p\n", (void *)p);
@@ -30,5 +29,12 @@ int main(void)
     printf("numbers[2] = %d\n", numbers[2]);
     printf("*(p+2) = %d\n", *(p + 2));
 
+    printf("\n");
+
+    p += 2;
+
+    printf("*p = %d\n", *p);
+    printf("p == &numbers[2] : %d\n", p == &numbers[2]);
+    
     return 0;
 }

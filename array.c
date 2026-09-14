@@ -35,6 +35,22 @@ int main(void)
 
     printf("*p = %d\n", *p);
     printf("p == &numbers[2] : %d\n", p == &numbers[2]);
+
+    p -= 2;
+
+    printf("p[2] = %d\n", p[2]);
+
+    // the pointer size in 64 bit computer is 8 bytes.
+    // int * describes an address and occupies 8 bytes
+    // int 4 bytes
+    // char 1 byte
+
     
+    printf("\n");
+    
+    // this prints the address of the first element of the array
+    
+    printf("numbers = %p\n", (void *)numbers);
+
     return 0;
 }

@@ -7,11 +7,22 @@ struct Student
     int id;
 };
 
+struct Weird
+{
+    char a;
+    int b;
+};
+
 int main(void)
 {
     printf("offset of age = %zu\n", offsetof(struct Student, age));
     printf("offset of id = %zu\n", offsetof(struct Student, id));
 
+    printf("Weird struct size = %zu\n", sizeof(struct Weird));
+    printf("offset of a = %zu\n", offsetof(struct Weird, a));
+    printf("offset of b = %zu\n", offsetof(struct Weird, b));
+    
+    
     // struct Student student;
     // struct Student *p = &student;
     // student.age = 21;
